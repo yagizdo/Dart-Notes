@@ -123,22 +123,22 @@ void main() {
   students.add(student4);
 
   for (var s in students) {
-    print("*************************");
-    print("Student No : ${s.studentNo}");
-    print("Student Name : ${s.name}");
-    print("Student Class : ${s.classInfo}");
+    print('*************************');
+    print('Student No : ${s.studentNo}');
+    print('Student Name : ${s.name}');
+    print('Student Class : ${s.classInfo}');
   }
   print('----------------------------------------------');
   print('----------------------------------------------');
   // TR : Listelerde sıralama
   // ENG : Sorting in lists
 
-  print("The first version");
+  print('The first version');
   for (var s in students) {
-    print("*************************");
-    print("Student No : ${s.studentNo}");
-    print("Student Name : ${s.name}");
-    print("Student Class : ${s.classInfo}");
+    print('*************************');
+    print('Student No : ${s.studentNo}');
+    print('Student Name : ${s.name}');
+    print('Student Class : ${s.classInfo}');
   }
 
   print('----------------------------------------------');
@@ -147,20 +147,20 @@ void main() {
   students.sort(sort1);
   print('Sort from smallest to largest');
   for (var s in students) {
-    print("*************************");
-    print("Student No : ${s.studentNo}");
-    print("Student Name : ${s.name}");
-    print("Student Class : ${s.classInfo}");
+    print('*************************');
+    print('Student No : ${s.studentNo}');
+    print('Student Name : ${s.name}');
+    print('Student Class : ${s.classInfo}');
   }
 
   Comparator<Students> sort2 = (y, x) => x.studentNo.compareTo(y.studentNo);
   students.sort(sort2);
   print('Sort from largest to smallest');
   for (var s in students) {
-    print("*************************");
-    print("Student No : ${s.studentNo}");
-    print("Student Name : ${s.name}");
-    print("Student Class : ${s.classInfo}");
+    print('*************************');
+    print('Student No : ${s.studentNo}');
+    print('Student Name : ${s.name}');
+    print('Student Class : ${s.classInfo}');
   }
 
   print('----------------------------------------------');
@@ -170,10 +170,10 @@ void main() {
   Comparator<Students> sort3 = (x, y) => x.name.compareTo(y.name);
   students.sort(sort3);
   for (var s in students) {
-    print("*************************");
-    print("Student No : ${s.studentNo}");
-    print("Student Name : ${s.name}");
-    print("Student Class : ${s.classInfo}");
+    print('*************************');
+    print('Student No : ${s.studentNo}');
+    print('Student Name : ${s.name}');
+    print('Student Class : ${s.classInfo}');
   }
 
   print('----------------------------------------------');
@@ -181,9 +181,51 @@ void main() {
   Comparator<Students> sort4 = (y, x) => x.name.compareTo(y.name);
   students.sort(sort4);
   for (var s in students) {
-    print("*************************");
-    print("Student No : ${s.studentNo}");
-    print("Student Name : ${s.name}");
-    print("Student Class : ${s.classInfo}");
+    print('*************************');
+    print('Student No : ${s.studentNo}');
+    print('Student Name : ${s.name}');
+    print('Student Class : ${s.classInfo}');
+  }
+  print('----------------------------------------------');
+  print('----------------------------------------------');
+  print('----------------------------------------------');
+  print('----------------------------------------------');
+  print('----------------------------------------------');
+  print('----------------------------------------------');
+  print('----------------------------------------------');
+
+  // TR : Listeler de filtreleme işlemleri
+  // ENG : Filtering operations in lists
+
+  // Filtering student numbers greater than 200
+
+  // TR : Burada Iterable fonksiyonunu kullanıyoruz. Bir filter için değişken veriyoruz sonrasında kullanmak istediğimiz diziyi belirtiyoruz .where diyip parantez içerisine yine kullanmak istediğimiz bir değişken veriyoruz. Bu değişken ile dizi de ki verilere erişecek ve bir filtre belirteceğiz.
+  // ENG : // TR : We are using the Iterable function here. We give a variable for a filter, then we specify the array we want to use. We say where and give a variable we want to use in the parentheses. With this variable, we will access the data in the array and specify a filter.
+  Iterable<Students> filteredList = students.where((student) {
+    return student.studentNo > 200;
+  });
+
+  students = filteredList.toList();
+  print('Filtering student numbers greater than 200');
+  for (var s in students) {
+    print('*************************');
+    print('Student No : ${s.studentNo}');
+    print('Student Name : ${s.name}');
+    print('Student Class : ${s.classInfo}');
+  }
+  //Filter only names that contain the letter h
+  Iterable<Students> filteredList2 = students.where((student) {
+    return student.name.contains('h');
+  });
+
+  students = filteredList2.toList();
+  print('----------------------------------------------');
+  print('----------------------------------------------');
+  print('Filter only names that contain the letter h');
+  for (var s in students) {
+    print('*************************');
+    print('Student No : ${s.studentNo}');
+    print('Student Name : ${s.name}');
+    print('Student Class : ${s.classInfo}');
   }
 }
