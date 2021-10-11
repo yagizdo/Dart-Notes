@@ -103,7 +103,10 @@ void main() {
   for (var i = 0; i < (fruits.length); i++) {
     print('Fruits in index $i : ${fruits[i]}');
   }
-
+  print('----------------------------------------------');
+  print('----------------------------------------------');
+  print('----------------------------------------------');
+  print('----------------------------------------------');
   // TR : Listelerimizde objeleri de tutabiliriz. Mesela bu örnekte Students classından oluşturduğumuz nesneleri students listesinde tutuyoruz.
   // ENG : We can also keep objects in our lists. For example, in this example, we keep the objects we created from the Students class in the students list.
 
@@ -119,6 +122,64 @@ void main() {
   students.add(student3);
   students.add(student4);
 
+  for (var s in students) {
+    print("*************************");
+    print("Student No : ${s.studentNo}");
+    print("Student Name : ${s.name}");
+    print("Student Class : ${s.classInfo}");
+  }
+  print('----------------------------------------------');
+  print('----------------------------------------------');
+  // TR : Listelerde sıralama
+  // ENG : Sorting in lists
+
+  print("The first version");
+  for (var s in students) {
+    print("*************************");
+    print("Student No : ${s.studentNo}");
+    print("Student Name : ${s.name}");
+    print("Student Class : ${s.classInfo}");
+  }
+
+  print('----------------------------------------------');
+
+  Comparator<Students> sort1 = (x, y) => x.studentNo.compareTo(y.studentNo);
+  students.sort(sort1);
+  print('Sort from smallest to largest');
+  for (var s in students) {
+    print("*************************");
+    print("Student No : ${s.studentNo}");
+    print("Student Name : ${s.name}");
+    print("Student Class : ${s.classInfo}");
+  }
+
+  Comparator<Students> sort2 = (y, x) => x.studentNo.compareTo(y.studentNo);
+  students.sort(sort2);
+  print('Sort from largest to smallest');
+  for (var s in students) {
+    print("*************************");
+    print("Student No : ${s.studentNo}");
+    print("Student Name : ${s.name}");
+    print("Student Class : ${s.classInfo}");
+  }
+
+  print('----------------------------------------------');
+
+  print('----------------------------------------------');
+  print('Sort textual from smallest to largest.');
+  Comparator<Students> sort3 = (x, y) => x.name.compareTo(y.name);
+  students.sort(sort3);
+  for (var s in students) {
+    print("*************************");
+    print("Student No : ${s.studentNo}");
+    print("Student Name : ${s.name}");
+    print("Student Class : ${s.classInfo}");
+  }
+
+  print('----------------------------------------------');
+  print('Sort textual from largest to smallest.');
+  Comparator<Students> sort4 = (y, x) => x.name.compareTo(y.name);
+  students.sort(sort4);
   for (var s in students) {
     print("*************************");
     print("Student No : ${s.studentNo}");
