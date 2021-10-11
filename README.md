@@ -4,7 +4,7 @@ Notes I took while learning darts.
 
 ## Contents
 
-Detailed list notes.
+- Detailed list usages.
 
 ## Contributing
 
