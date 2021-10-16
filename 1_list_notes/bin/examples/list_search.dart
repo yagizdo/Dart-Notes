@@ -9,14 +9,14 @@ void main() {
     'Recaizade Mahmut Ekrem' //4. Eleman.
   ];*/
   var names = <String>[];
-  names.add('Oğuzhan İnce'); // 0. Eleman.
-  names.add('Selim Yalınkılıç'); // 1. Eleman.
-  names.add('Yılmaz Yağız Dokumacı'); // 2. Eleman.
+  names.add('Oguzhan'); // 0. Eleman.
+  names.add('Selim'); // 1. Eleman.
+  names.add('Yilmaz'); // 2. Eleman.
 
   print(names);
 
   print('Please write a name..');
-  late String input = stdin.readLineSync()!;
+  String input = stdin.readLineSync()!;
   for (var n in names) {
     if (n == input) {
       print('Name available');
