@@ -8,7 +8,7 @@ Projects while learning lists in Dart.
 - List Content Change Example
 - List with Search Example
 - List Odd - Even Number Example
-- Random Number Generation Example ()
+- Random Number Generation Example
 
 ## Contributing
 
