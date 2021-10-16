@@ -4,7 +4,8 @@ void main() {
   var numbers = <int>[];
   var rnd = Random();
   for (var i = 0; i <= 100; i++) {
-    numbers.add(rnd.nextInt(51));
+    int randomNumb = rnd.nextInt(51);
+    numbers.add(randomNumb);
   }
   print(numbers);
   print('---------------------------------------');
