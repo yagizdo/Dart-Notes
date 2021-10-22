@@ -13,7 +13,8 @@ void main() {
   print(iller.length);
   print(iller.isEmpty);
 
-  // İçerisinde bu değerler var mı diye kontrol eder
+  // TR - İçerisinde bu değerler var mı diye kontrol eder
+  // EN - It checks if these values ​​are in it.
   print(iller.containsKey(16));
   print(iller.containsValue('İstanbul'));
 
@@ -23,15 +24,18 @@ void main() {
     print('Result :  ${iller[k]}');
   }
 
-  // Hashmap değer silme
+  // TR - Hashmap değer silme
+  // EN - Hashmap value deletion
   iller.remove(16);
   print(iller);
 
-  // Hashmap komple listeyi temizleme
+  // TR - Hashmap komple listeyi temizleme
+  // EN - Clearing the hashmap complete list
   iller.clear();
   print(iller);
 
-  // Hashmap ve OOP
+  // TR - Hashmap ve OOP
+  // EN - Hashmap and OOP
   var p1 = Persons(111111, 'Yılmaz');
   var p2 = Persons(333333, 'Selim');
   var p3 = Persons(313131, 'Oguzhan');
