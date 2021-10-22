@@ -5,6 +5,8 @@ Notes I took while learning darts.
 ## Contents
 
 - Detailed list usages.
+- Simple String operations
+- Loops Examples
 
 ## Contributing
 
