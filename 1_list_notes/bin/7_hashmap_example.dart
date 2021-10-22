@@ -3,36 +3,36 @@ import 'dart:collection';
 import 'Persons.dart';
 
 void main() {
-  var iller = HashMap<int, String>();
+  var provinces = HashMap<int, String>();
 
-  iller[16] = 'Bursa';
-  iller[34] = 'İstanbul';
+  provinces[16] = 'Bursa';
+  provinces[34] = 'İstanbul';
 
-  print(iller);
+  print(provinces);
 
-  print(iller.length);
-  print(iller.isEmpty);
+  print(provinces.length);
+  print(provinces.isEmpty);
 
   // TR - İçerisinde bu değerler var mı diye kontrol eder
   // EN - It checks if these values ​​are in it.
-  print(iller.containsKey(16));
-  print(iller.containsValue('İstanbul'));
+  print(provinces.containsKey(16));
+  print(provinces.containsValue('İstanbul'));
 
-  var keys = iller.keys;
+  var keys = provinces.keys;
 
   for (var k in keys) {
-    print('Result :  ${iller[k]}');
+    print('Result :  ${provinces[k]}');
   }
 
   // TR - Hashmap değer silme
   // EN - Hashmap value deletion
-  iller.remove(16);
-  print(iller);
+  provinces.remove(16);
+  print(provinces);
 
   // TR - Hashmap komple listeyi temizleme
   // EN - Clearing the hashmap complete list
-  iller.clear();
-  print(iller);
+  provinces.clear();
+  print(provinces);
 
   // TR - Hashmap ve OOP
   // EN - Hashmap and OOP
