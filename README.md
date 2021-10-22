@@ -7,6 +7,7 @@ Notes I took while learning darts.
 - Detailed list usages.
 - Simple String operations
 - Loops Examples
+- Try Catch example
 
 ## Contributing
 

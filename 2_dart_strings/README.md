@@ -4,7 +4,8 @@ Notes I took while learning Strings in Dart.
 
 ## Contents
 
-Detailed String operations
+- Detailed String operations
+- Reversed Word example
 
 ## Contributing
 

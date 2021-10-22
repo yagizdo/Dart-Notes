@@ -1,10 +1,11 @@
 # Dart Projects
 
-Notes I took while learning loop on darts.
+Notes I took while learning Try-Catch and Asynchronous on darts.
 
 ## Contents
 
-- Loops Examples
+- Try-Catch example
+- Example of asynchronous method
 
 ## Contributing
 
